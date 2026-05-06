@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie</title>
+</head>
+<body>
+
+{% if movie %}
+    <h1>{{ movie.title }}</h1>
+    <p>{{ movie.description }}</p>
+{% else %}
+    <h1>Movie not found</h1>
+    <p>No movie exists with ID {{ movie_id }}</p>
+{% endif %}
+
+<a href="{{ url_for('home') }}">Back</a>
+
+</body>
+</html>
